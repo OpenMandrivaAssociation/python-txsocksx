@@ -1,6 +1,6 @@
 %define	oname	txsocksx
 
-Name:		python-%{oname}
+Name:		python2-%{oname}
 Version:	1.13.0.3
 Release:	1
 Summary:	Twisted client endpoints for SOCKS{4,4a,5}
@@ -9,7 +9,7 @@ License:	ISC
 Group:		Development/Python
 Url:		https://github.com/habnabit/txsocksx
 BuildArch:	noarch
-BuildRequires:	pythonegg(setuptools)
+BuildRequires:	python2-setuptools
 
 %description
 |txsocksx| is SOCKS4/4a and SOCKS5 client 
@@ -22,16 +22,16 @@ github: https://github.com/habnabit/txsocksx.
 %setup -q -n %{oname}-%{version}
 
 %build
-python setup.py build
+python2 setup.py build
 
 %install
-python setup.py install --root=%{buildroot}
+python2 setup.py install --root=%{buildroot}
 
 %files
 %doc COPYING
 %doc README.rst
 %doc requirements.txt
 %doc version.txt
-%{py_puresitedir}/txsocksx/*.py*
-%{py_puresitedir}/txsocksx/test/*.py*
-%{py_puresitedir}/txsocksx*.egg-info
+%{py2_puresitedir}/txsocksx/*.py*
+%{py2_puresitedir}/txsocksx/test/*.py*
+%{py2_puresitedir}/txsocksx*.egg-info
