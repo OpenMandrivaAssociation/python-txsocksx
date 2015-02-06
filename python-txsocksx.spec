@@ -2,7 +2,7 @@
 
 Name:		python2-%{oname}
 Version:	1.13.0.3
-Release:	1
+Release:	2
 Summary:	Twisted client endpoints for SOCKS{4,4a,5}
 Source0:	http://pypi.python.org/packages/source/t/%{oname}/%{oname}-%{version}.tar.gz
 License:	ISC
